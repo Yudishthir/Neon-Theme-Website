@@ -1,0 +1,562 @@
+/*css for index.html in timepass folder
+	main parts
+		-welcome title
+		-main div
+		-first hero div
+		-second hero div
+		-contact div
+		-footer
+
+	classes written first followed by ids
+	mobile first approach
+	animations with required classes
+
+	Made by Yudishthir Lokhande, 2019
+*/
+
+/*remove all padding and margins*/
+*
+{
+	margin: 0;
+	padding: 0;
+	font-family: 'Space Mono', monospace;
+}
+
+.left, .right
+{
+	overflow: auto;
+}
+
+body
+{
+	background-color: #000000;
+}
+
+/* for flex super divs*/
+/*for tablets,mobile*/
+.flex-container
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+/*css for hero class*/
+.hero
+{
+	width: 100%;
+	height: 100vh;
+} 
+
+.hero > div
+{
+	opacity: 0.7;
+}
+
+/*animation for hero hover*/
+.hero > div:hover
+{
+	opacity: 1;
+	-moz-box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 55px #fff, 0 0 75px #fff;
+	-webkit-box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 55px #fff, 0 0 75px #fff;
+	box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 55px #fff, 0 0 75px #fff;
+}
+
+/*for contact div classes*/
+.contact
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.contact-details
+{	
+	display: flex;
+	width: 100%;
+	text-align: center;	
+	color: #FFFFFF;
+}
+
+/*for all animation*/
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@media (print), (prefers-reduced-motion) {
+  .animated {
+    -webkit-animation: unset !important;
+    animation: unset !important;
+    -webkit-transition: none !important;
+    transition: none !important;
+  }
+}
+
+/*fade in animation*/
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+/*css for main card*/
+#main
+{
+	margin-top: 3em;
+}
+
+/*card normal look*/
+#main > div
+{
+	margin: 1em;
+	padding: 1em;
+	border-radius: 25px;
+	background-color: #FFFFFF;
+	opacity: 0.7;
+	text-align: center;
+}
+
+/*animation for card hover*/
+#main > div:hover
+{
+	opacity: 1;
+	-webkit-box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 55px #fff, 0 0 75px #fff;
+	-moz-box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 55px #fff, 0 0 75px #fff;
+	box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 55px #fff, 0 0 75px #fff;
+}
+
+/*central div*/
+#welcome
+{
+	display: flex;
+	justify-content: center;
+	margin: 2.5em 0 1.5em 0;
+}
+
+#welcome > span
+{
+	padding: 0.2em 0.5em 0.2em 0.5em;
+	text-align: center;
+	font-family: 'Monoton', cursive;
+	font-size: 2.75em;
+	color: #fff;
+	border-style: solid;
+	border-color: #fff;
+	border-width: 2px;
+	-webkit-box-shadow: inset 0 0 5px #fff, inset 0 0 10px #fff, inset 0 0 20px #ff0080, inset 0 0 30px #ff0080, inset 0 0 40px #ff0080, inset 0 0 55px #ff0080, 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;	
+	-moz-box-shadow: inset 0 0 5px #fff, inset 0 0 10px #fff, inset 0 0 20px #ff0080, inset 0 0 30px #ff0080, inset 0 0 40px #ff0080, inset 0 0 55px #ff0080, 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
+	box-shadow: inset 0 0 5px #fff, inset 0 0 10px #fff, inset 0 0 20px #ff0080, inset 0 0 30px #ff0080, inset 0 0 40px #ff0080, inset 0 0 55px #ff0080, 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;		
+	text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
+    animation: flicker 1.5s infinite alternate;
+}
+
+/*flicker animation on the welcome border*/
+@keyframes flicker {
+    
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        -webkit-box-shadow: inset 0 0 5px #fff, inset 0 0 10px #fff, inset 0 0 20px #ff0080, inset 0 0 30px #ff0080, inset 0 0 40px #ff0080, inset 0 0 55px #ff0080, 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;	
+		-moz-box-shadow: inset 0 0 5px #fff, inset 0 0 10px #fff, inset 0 0 20px #ff0080, inset 0 0 30px #ff0080, inset 0 0 40px #ff0080, inset 0 0 55px #ff0080, 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
+		box-shadow: inset 0 0 5px #fff, inset 0 0 10px #fff, inset 0 0 20px #ff0080, inset 0 0 30px #ff0080, inset 0 0 40px #ff0080, inset 0 0 55px #ff0080, 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;	      
+    }
+    
+    20%, 24%, 55% {        
+        box-shadow: none;
+    }    
+}
+
+@-webkit-keyframes flicker {
+    
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+         -webkit-box-shadow: inset 0 0 5px #fff, inset 0 0 10px #fff, inset 0 0 20px #ff0080, inset 0 0 30px #ff0080, inset 0 0 40px #ff0080, inset 0 0 55px #ff0080, 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;	
+		-moz-box-shadow: inset 0 0 5px #fff, inset 0 0 10px #fff, inset 0 0 20px #ff0080, inset 0 0 30px #ff0080, inset 0 0 40px #ff0080, inset 0 0 55px #ff0080, 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;	      
+    }
+    
+    20%, 24%, 55% {        
+        box-shadow: none;
+    }    
+}
+
+@-moz-keyframes flicker {
+    
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+         -webkit-box-shadow: inset 0 0 5px #fff, inset 0 0 10px #fff, inset 0 0 20px #ff0080, inset 0 0 30px #ff0080, inset 0 0 40px #ff0080, inset 0 0 55px #ff0080, 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;	
+		-moz-box-shadow: inset 0 0 5px #fff, inset 0 0 10px #fff, inset 0 0 20px #ff0080, inset 0 0 30px #ff0080, inset 0 0 40px #ff0080, inset 0 0 55px #ff0080, 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;	      
+    }
+    
+    20%, 24%, 55% {        
+        box-shadow: none;
+    }    
+}
+
+/*for the base of the page*/
+#footer
+{
+	margin-top: 4em;
+	padding-bottom: 2em;
+	text-align: center;
+	text-shadow: 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
+	color: #fff;
+}
+
+#footer > a:link
+{
+	text-decoration: none;
+	text-shadow: 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
+	color: #fff;
+}
+
+#footer > a:active
+{
+	text-decoration: none;
+	text-shadow: 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
+	color: #fff;
+}
+
+#footer > a:visited
+{
+	text-decoration: none;
+	text-shadow: 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
+	color: #fff;
+}
+
+#first-hero
+{
+	margin-top: 3em;
+}
+
+#second-hero
+{
+	flex-direction: column-reverse;
+}
+
+/*right side child division in hero*/
+#rside
+{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	background-color: #FFFFFF;
+	float: right;
+	width: 100%;
+	height: 100vh;
+	text-align: center;
+}
+
+/*div containing content of rside*/
+#rside > .right
+{
+	margin: 0.5em 1.5em 1.5em 1.5em;
+}
+
+#rside > .right-title
+{
+	font-size: 2em;
+}	
+
+/*left side child division in hero*/
+#lside
+{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	background-color: #FF0000;
+	float: left;
+	width: 100%;
+	height: 100vh;
+	text-align: center;
+}
+
+/*div containing content of lside*/
+#lside > .left
+{
+	margin: 0.5em 1.5em 1.5em 1.5em;
+}
+
+#lside > .left-title
+{
+	font-size: 2em;
+}	
+
+/*custom coloring*/
+#second-hero > #lside
+{
+	background-color: #FFFFFF;
+}
+
+#second-hero > #rside
+{
+	background-color: #FF0000;
+}
+
+/*image input on sides*/
+#first-hero > #lside
+{
+	background-image: url('../images/light-bulb.jpg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#second-hero > #rside
+{
+	background-image: url('../images/code-snippet.jpg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+/*hover cases for images*/
+#first-hero > #lside:hover
+{
+	opacity: 1;
+	-moz-box-shadow: 0 0 10px #99ddff, 0 0 20px #99ddff, 0 0 30px #99ddff, 0 0 40px #b3e6ff, 0 0 55px #b3e6ff, 0 0 75px #b3e6ff;
+	-webkit-box-shadow: 0 0 10px #99ddff, 0 0 20px #99ddff, 0 0 30px #99ddff, 0 0 40px #b3e6ff, 0 0 55px #b3e6ff, 0 0 75px #b3e6ff;
+	box-shadow: 0 0 10px #99ddff, 0 0 20px #99ddff, 0 0 30px #99ddff, 0 0 40px #b3e6ff, 0 0 55px #b3e6ff, 0 0 75px #b3e6ff;
+}
+
+#second-hero > #rside:hover
+{
+	opacity: 1;
+	-moz-box-shadow: 0 0 10px #fff000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 55px #ff0000, 0 0 75px #ff0000;
+	-webkit-box-shadow: 0 0 10px #666666, 0 0 20px #666666, 0 0 30px #666666, 0 0 40px #666666, 0 0 55px #666666, 0 0 75px #666666;
+	box-shadow: 0 0 10px #666666, 0 0 20px #666666, 0 0 30px #666666, 0 0 40px #666666, 0 0 55px #666666, 0 0 75px #666666;
+}
+
+/*contact div css*/
+#newsletter 
+{
+	color: #FFFFFF;
+	opacity: 0.7;
+	margin: 3em 2em 1em 2em;
+	padding: 3em 0 3em 0;
+	border-style: solid;
+	border-color: #fff;
+	border-width: 2px;
+	border-radius: 25px;
+	-webkit-box-shadow: inset 0 0 5px #fff000, inset 0 0 10px #fff000, inset 0 0 20px #ff0000, inset 0 0 30px #ff0000, inset 0 0 40px #ff0000, inset 0 0 55px #ff0000, 0 0 5px #fff000, 0 0 10px #fff000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 55px #ff0000, 0 0 75px #ff0000;	
+	-moz-box-shadow: inset 0 0 5px #fff000, inset 0 0 10px #fff000, inset 0 0 20px #ff0000, inset 0 0 30px #ff0000, inset 0 0 40px #ff0000, inset 0 0 55px #ff0000, 0 0 5px #fff000, 0 0 10px #fff000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 55px #ff0000, 0 0 75px #ff0000;	
+	box-shadow: inset 0 0 5px #fff000, inset 0 0 10px #fff000, inset 0 0 20px #ff0000, inset 0 0 30px #ff0000, inset 0 0 40px #ff0000, inset 0 0 55px #ff0000, 0 0 5px #fff000, 0 0 10px #fff000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 55px #ff0000, 0 0 75px #ff0000;	
+}
+
+/*for subscribe label*/
+#subscribe
+{
+	justify-content: center;
+}
+
+/*for text input*/
+#input-email
+{
+	margin-top: 2em;
+	justify-content: center;
+}
+
+#input-email > input
+{
+	padding: 0.2em 0em 0.2em 2em;
+	outline: none;
+	width: 35em;
+	color: #FFFFFF;
+	background: none;
+	border-style: solid;
+	border-color: #fff;
+	border-width: 2px;
+	border-radius: 25px;
+	-webkit-box-shadow: inset 0 0 5px #fff, inset 0 0 10px #ff0000, 0 0 5px #fff000, 0 0 10px #fff000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 55px #ff0000, 0 0 75px #ff0000;	
+	-moz-box-shadow: inset 0 0 5px #fff, inset 0 0 10px #ff0000, 0 0 5px #fff000, 0 0 10px #fff000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 55px #ff0000, 0 0 75px #ff0000;
+	box-shadow: inset 0 0 5px #fff, inset 0 0 10px #ff0000, 0 0 5px #fff000, 0 0 10px #fff000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 55px #ff0000, 0 0 75px #ff0000;	
+}
+
+/*css for subscribe button*/
+#sub-button
+{
+	margin-top: 2em;
+}
+
+#sub-button > div > button
+{
+	color: #FFFFFF;
+	background: none;
+	padding: 0.2em 1em 0.2em 1em;
+	cursor: pointer;
+	background: none;
+	border-style: solid;
+	border-color: #fff;
+	border-width: 2px;
+	-webkit-box-shadow: inset 0 0 5px #fff, inset 0 0 10px #ff0000, 0 0 5px #fff000, 0 0 10px #fff000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 55px #ff0000, 0 0 75px #ff0000;	
+	-moz-box-shadow: inset 0 0 5px #fff, inset 0 0 10px #ff0000, 0 0 5px #fff000, 0 0 10px #fff000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 55px #ff0000, 0 0 75px #ff0000;
+	box-shadow: inset 0 0 5px #fff, inset 0 0 10px #ff0000, 0 0 5px #fff000, 0 0 10px #fff000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 55px #ff0000, 0 0 75px #ff0000;	
+	animation: change 1s infinite alternate;
+}
+
+/*animation for button colour change*/
+@keyframes change
+{
+	from
+	{
+		-webkit-box-shadow: inset 0 0 5px #fff, inset 0 0 10px #ff0000, 0 0 5px #fff000, 0 0 10px #fff000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 55px #ff0000, 0 0 75px #ff0000;	
+		-moz-box-shadow: inset 0 0 5px #fff, inset 0 0 10px #ff0000, 0 0 5px #fff000, 0 0 10px #fff000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 55px #ff0000, 0 0 75px #ff0000;
+		box-shadow: inset 0 0 5px #fff, inset 0 0 10px #ff0000, 0 0 5px #fff000, 0 0 10px #fff000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 55px #ff0000, 0 0 75px #ff0000;	
+	}
+
+	to
+	{
+		-webkit-box-shadow: inset 0 0 5px #fff, inset 0 0 10px #ff3300, 0 0 5px #fff, 0 0 10px #ff3300, 0 0 20px #ff3300, 0 0 30px #ff3300, 0 0 40px #ff3300, 0 0 55px #ff3300, 0 0 75px #ff3300;	
+		-moz-box-shadow: inset 0 0 5px #fff, inset 0 0 10px #ff3300, 0 0 5px #fff, 0 0 10px #ff3300, 0 0 20px #ff3300, 0 0 30px #ff3300, 0 0 40px #ff3300, 0 0 55px #ff3300, 0 0 75px #ff3300;
+		box-shadow: inset 0 0 5px #fff, inset 0 0 10px #ff3300, 0 0 5px #fff, 0 0 10px #ff3300, 0 0 20px #ff3300, 0 0 30px #ff3300, 0 0 40px #ff3300, 0 0 55px #ff3300, 0 0 75px #ff3300;		
+	}
+}
+
+/*for medium mobile*/
+@media screen and (max-width: 615px)
+{
+	#input-email > input
+	{		
+		width: 25em;
+	}
+}
+
+/*for small phones*/
+@media screen and (max-width: 445px)
+{
+	#input-email > input
+	{		
+		width: 15em;
+	}
+
+	#first-hero > #lside
+	{
+	margin-top: 10em;
+	min-height: 20em;
+	}
+
+	#second-hero > #rside
+	{
+	margin-top: 35em;
+	min-height: 20em;
+	}
+
+	#newsletter
+	{
+		margin: 27em 2em 1em 2em;
+	}
+}
+
+/*for laptops,desktops*/
+@media screen and (min-width: 768px)
+{
+	.flex-container
+	{
+		flex-direction: row;
+	}
+    
+	/*border gaps*/
+	#main > div:first-child
+	{
+		margin-left: 4em;
+	}
+
+	#main > div:last-child
+	{
+		margin-right: 4em;
+	}	
+
+	/*for hero div*/
+	.hero > div
+	{
+		width: 100%;
+	}
+
+	#second-hero
+	{
+		flex-direction: row;
+	}
+
+	/*for contact div*/
+	/*changing direction and margin for alognment*/
+ 	#subscribe
+	{
+		justify-content: flex-end;
+	}
+
+	#input-email
+	{
+		justify-content: flex-start;
+		margin-top: 0;
+	}	
+
+	#input-email > input
+	{
+		width: 25em;
+	}
+
+	.contact-details > input
+	{
+		margin-left: 2em;
+	}
+
+	#welcome > span
+	{
+		font-size: 4em;
+	}
+
+	#lside > .left-title
+	{
+		font-size: 3em;
+	}
+
+	#rside > .right-title
+	{
+		font-size: 3em;
+	}
+
+	#first-hero >  #lside
+	{
+		height: 100vh;
+		min-height: 0;
+		margin-top: 0;
+	}
+
+	#second-hero >  #rside
+	{
+		height: 100vh;
+		min-height: 0;
+		margin-top: 0;
+	}
+
+	#newsletter
+	{
+		margin: 3em 2em 1em 2em;
+	}
+}
