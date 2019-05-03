@@ -20,7 +20,7 @@
 <body>
 	<!-- welcome title -->
 	<div id="welcome"> 
-		<span id="typeWrite" onclick ="typeWriter('typeWrite','Welcome')">Welcome</span>
+		<span id="typeWrite"></span>
 	</div>
 
 	<!-- main division -->
@@ -92,21 +92,23 @@
 
 	<!-- contact div -->
 	<div id="newsletter" class="animated fadeInUp">
-		<!-- first sub div for input and label -->
-		<div class="flex-container contact animated fadeInUp">
-				<div class="contact-details" id="subscribe">
-					<div>Subscribe to our newsletter:</div>
-				</div>
-				<div class="contact-details" id="input-email">
-					<input type="email" name="sub-email" placeholder="Enter your email">
-				</div>
-		</div>
-		<!-- second sub div for button -->
-		<div class="flex-container contact animated fadeInUp" id="sub-button">
-			<div>
-				<button>Subscribe</button>
+		<form>
+			<!-- first sub div for input and label -->
+			<div class="flex-container contact animated fadeInUp">
+					<div class="contact-details" id="subscribe">
+						<div>Subscribe to our newsletter:</div>
+					</div>
+					<div class="contact-details" id="input-email">
+						<input type="email" name="sub-email" placeholder="Enter your email" required>
+					</div>
 			</div>
-		</div>
+			<!-- second sub div for button -->
+			<div class="flex-container contact animated fadeInUp" id="sub-button">
+				<div>
+					<button>Subscribe</button>
+				</div>
+			</div>
+		</form>
 	</div>
 
 	<!-- footer -->

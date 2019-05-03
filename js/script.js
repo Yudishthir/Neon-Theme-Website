@@ -2,14 +2,12 @@
 // pass object id and message to be displayed
 // append each character to the inner html of the DOM object
 
-function typeWriter(callName,message) {
-	var obj = document.getElementById(callName);
-	var txt = message;
+window.addEventListener("load" , () => {
+	var obj = document.getElementById('typeWrite');
+	var txt = "Welcome";
 	var i = 0;
-
-	obj.innerHTML = "";
   
-  	typeLoop();
+  typeLoop();
 
 	function typeLoop() {
 
@@ -24,5 +22,5 @@ function typeWriter(callName,message) {
   			return;	
   		}
   	}
-}
-
+  }
+);
